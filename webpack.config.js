@@ -7,7 +7,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     library: 'finalSpaceCharacters',
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'umd',
+    globalObject: 'this',
   },
   devtool: 'source-map',
   module: {
