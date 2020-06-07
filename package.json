@@ -8,6 +8,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "webpack --mode production",
     "test": "jest --coverage",
     "lint": "eslint .",
@@ -31,6 +32,7 @@
   },
   "dependencies": {
     "jest": "26.0.1",
+    "rimraf": "3.0.2",
     "unique-random-array": "2.0.0"
   }
 }
