@@ -24,6 +24,11 @@
       "master"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "webpack --mode production",
@@ -33,12 +38,15 @@
     "format": "yarn run prettier --write",
     "check-format": "yarn run prettier --list-different",
     "validate": "npm-run-all --parallel check-format test build",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "commit": "npx git-cz"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
     "@babel/preset-env": "7.10.2",
     "babel-loader": "8.1.0",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
     "eslint": "7.2.0",
     "eslint-config-prettier": "6.11.0",
     "husky": "4.2.5",
