@@ -10,13 +10,13 @@
 This package is distributed via npm
 
 ```sh
-npm install final-space-characters
+$ npm install final-space-characters
 ```
 
 or
 
 ```sh
-yarn add final-space-characters
+$ yarn add final-space-characters
 ```
 
 ### Usage
@@ -34,3 +34,5 @@ Returns an array of final space characters strings
 #### random()
 
 Returns a random final space character
+
+###
