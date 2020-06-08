@@ -18,11 +18,11 @@ jobs:
           node-version: 12
           registry-url: https://registry.npmjs.org/
       - name: Install all dependencies
-          run: yarn
+        run: yarn
       - name: Run validations
-          run: yarn validate
+        run: yarn validate
       - name: Publish package
-          run: npm run semantic-release
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm run semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
