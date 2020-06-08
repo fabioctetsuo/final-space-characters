@@ -26,5 +26,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: echo "my env var ${NPM_TOKEN}"
-        run: echo "my env var ${secrets.NPM_TOKEN}"
-        run: npm run semantic-release
