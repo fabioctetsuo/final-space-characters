@@ -1,6 +1,6 @@
 {
   "name": "final-space-characters",
-  "version": "1.0.2",
+  "version": "0.0.0-development",
   "description": "An open source library to return the final space characters",
   "main": "dist/main.js",
   "repository": "https://github.com/fabioctetsuo/final-space-characters",
@@ -18,6 +18,12 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public",
+    "branches": [
+      "master"
+    ]
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "webpack --mode production",
@@ -26,7 +32,8 @@
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json)\" \"!package.json\"",
     "format": "yarn run prettier --write",
     "check-format": "yarn run prettier --list-different",
-    "validate": "npm-run-all --parallel check-format test build"
+    "validate": "npm-run-all --parallel check-format test build",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
@@ -38,6 +45,7 @@
     "lint-staged": "10.2.9",
     "npm-run-all": "4.1.5",
     "prettier": "2.0.5",
+    "semantic-release": "^17.0.8",
     "webpack": "4.43.0",
     "webpack-cli": "3.3.11"
   },
