@@ -1,4 +1,4 @@
-## Get random names from Star Wars characters.
+## Get random names from Final Space characters.
 
 [![Build Status](https://travis-ci.org/fabioctetsuo/final-space-characters.svg?branch=master)](https://travis-ci.org/fabioctetsuo/final-space-characters)
 ![Codecov](https://img.shields.io/codecov/c/github/fabioctetsuo/final-space-characters)
