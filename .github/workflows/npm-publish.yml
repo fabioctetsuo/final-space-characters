@@ -1,0 +1,28 @@
+name: Test and Publish package
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Testing and Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to git branch
+        uses: actions/checkout@v1
+      - name: Setup node environment
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Install all dependencies
+          run: yarn
+      - name: Run validations
+          run: yarn validate
+      - name: Publish package
+          run: npm run semantic-release
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
